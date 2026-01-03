@@ -271,8 +271,8 @@
 
 {% block footer %}
 <footer>
-	<nav class="mobile-tab-bar">
-		{% if current_user.is_authenticated %}
+	{% if current_user.is_authenticated %}
+	<nav class="mobile-tab-bar mobile-tab-bar-4">
 		<button class="mobile-tab-button tab-recipes-active" onclick="window.location.href='{{ url_for('myrecipes.allRecipes') }}';">
 			<span class="tab-btn-icon"><img id="footerRecipes" src="{{ url_for('static', filename='footer-recipes.png', _external=True) }}" alt="{{ _('My Recipes') }}"></span>
 			<span class="tab-btn-text">{{ _('Recipes') }}</span>
@@ -289,7 +289,9 @@
 			<span class="tab-btn-icon"><img id="footerPlanner" src="{{ url_for('static', filename='footer-planner.png', _external=True) }}" alt="{{ _('Meal Planner') }}"></span>
 			<span class="tab-btn-text">{{ _('Planner') }}</span>
 		</button>
-		{% else %}
+	</nav>
+	{% else %}
+	<nav class="mobile-tab-bar mobile-tab-bar-3">
 		<button class="mobile-tab-button tab-explore-active" onclick="window.location.href='{{ url_for('explore.explore') }}';">
 			<span class="tab-btn-icon"><img id="footerExplore" src="{{ url_for('static', filename='footer-recipes.png', _external=True) }}" alt="{{ _('Explore') }}"></span>
 			<span class="tab-btn-text">{{ _('Explore') }}</span>
@@ -302,7 +304,7 @@
 			<span class="tab-btn-icon"><img id="footerRegister" src="{{ url_for('static', filename='footer-register.png', _external=True) }}" alt="{{ _('Register') }}"></span>
 			<span class="tab-btn-text">{{ _('Register') }}</span>
 		</button>
-		{% endif %}
 	</nav>
+	{% endif %}
 </footer>
 {% endblock %}

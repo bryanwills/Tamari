@@ -596,10 +596,15 @@ footer {display: none;}
     border-radius: 32px;
     padding: 5px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 0;
     height: 54px;
 	box-shadow: 0 0 10px 0 var(--color-body-bg);
+}
+.mobile-tab-bar-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+.mobile-tab-bar-4 {
+	grid-template-columns: repeat(4, 1fr);
 }
 .mobile-tab-button {
     appearance: none;
