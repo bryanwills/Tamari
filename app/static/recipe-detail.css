@@ -554,6 +554,15 @@ tr:nth-child(odd) {
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
+#notes p {
+	background: var(--color-steps);
+	border-radius: 10px;
+	width: 100%;
+	clear: both;
+	padding: 10px;
+	box-sizing: border-box;
+	white-space: pre-wrap;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width: 1300px) {
